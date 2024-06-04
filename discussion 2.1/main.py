@@ -46,5 +46,3 @@ if ready_to_adopt:
 else:
     print('We hope you find fulfillment in other areas of your life. '
           + 'I\'m sorry we couldn\'t make an adoption happen today.')
-
-
