@@ -36,19 +36,28 @@
 #     print(f'On day {day} your salary is ${salary:,.2f}')
 #     salary *= 2
 #
-# range(3)
+# # range(3)
+#
+# def main():
+#     while True:  # Forever loop
+#         wait_for_button_press()  # Wait for button press before starting
+#         user_text = transcribe_audio()
+#         paste_text(user_text)
+#         if keyboard.is_pressed('space'):  # Check if space bar was pressed during transcription
+#             print("Space bar pressed, stopping...")
+#             break  # Exit the loop
+#         else:
+#             print("No spacebar press detected. Continuing...")  # Optional
+#
+#
+# if __name__ == "__main__":
+#     main()
 
-def main():
-    while True:  # Forever loop
-        wait_for_button_press()  # Wait for button press before starting
-        user_text = transcribe_audio()
-        paste_text(user_text)
-        if keyboard.is_pressed('space'):  # Check if space bar was pressed during transcription
-            print("Space bar pressed, stopping...")
-            break  # Exit the loop
-        else:
-            print("No spacebar press detected. Continuing...")  # Optional
-            
+age = 60
 
-if __name__ == "__main__":
-    main()
+if age <= 65:
+print('Hello young buck!')
+    print('Keep on kickin!')
+    else:
+print('Hey there senior citizen!')
+    print('Go relax!')
