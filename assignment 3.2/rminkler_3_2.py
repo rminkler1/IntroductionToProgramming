@@ -70,9 +70,10 @@ while True:
 account_total = initial_investment  # track account total, begin with initial investment amount
 years = 0  # track years
 
+# Add interest to the initial investment until it doubles
 while account_total < (initial_investment * 2):
-    account_total += (account_total * (interest_rate / 100))  # add interest to the account total
-    years += 1
+    account_total += round(account_total * (interest_rate / 100), 2)  # add interest. round to whole cents.
+    years += 1      # add another year, so we know how many years have passed
 
 if years > 1:
     year = 'years'
@@ -80,5 +81,6 @@ else:
     year = 'year'
 
 # display output
-print(f'\nYour initial investment of ${initial_investment:,.2f} will take {years} {year} to double and equal ${account_total:,.2f}.\n'
+print(f'\nYour initial investment of ${initial_investment:,.2f} will take {years} {year} '
+      + f'to double and equal ${account_total:,.2f}.\n'
       + f'Calculated with an annualized interest rate of {interest_rate}%.')
