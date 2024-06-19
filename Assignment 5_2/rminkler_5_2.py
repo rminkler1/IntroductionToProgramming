@@ -16,7 +16,8 @@ PROMPT_FILE_NAME = "Enter a file name: "
 PROMPT_USER_NAME = "Enter your name: "
 PROMPT_STREET_ADDRESS = "Street address: "
 PROMPT_PHONE_NUMBER = "Enter your phone number: "
-FILE_OUTPUT_MESSAGE = "\nThe following data was read from the file "
+FILE_WRITTEN = "\nData was written to file"
+FILE_OUTPUT_MESSAGE = "\nData read from file"
 
 
 def main():
@@ -79,6 +80,9 @@ def get_file_name():
     if len(file_name) == 0:
         file_name = DEFAULT_FILE_NAME
 
+    # if the filename exceeds 251 characters (255-4), truncate the name
+    file_name = file_name[:251]
+
     # Add .txt extension if not already present.
     if not file_name.endswith(FILE_EXTENSION):
         file_name = file_name + FILE_EXTENSION
@@ -116,8 +120,17 @@ def save_user_data_file(file_name, user_name, street, phone):
     Write the username, street address, and phone number to a comma-separated
     line in the file that your user typed in Step 1.
     """
-    with open(file_name, "w") as file:
-        file.write(f"{user_name},{street},{phone}")
+    # Create the file to write to. If OS Error is raised then print error on screen
+    try:
+        with open(file_name, "w") as file:
+            file.write(f"{user_name},{street},{phone}")
+
+    except OSError as err:
+        print(err)
+
+    else:
+        # print success message when file is written.
+        print(f"{FILE_WRITTEN} \"{file_name}\".")
 
 
 def read_user_data_file(file_name):
@@ -126,16 +139,16 @@ def read_user_data_file(file_name):
     If file not found return a blank string and print the error in the console
     """
     try:
-        # Open the file that was just written to read. read file contents
+        # Open the file that was just written to read. Read first line of file
         with open(file_name, "r") as file:
-            file_contents = file.read()
+            file_contents = file.readline()
 
-    except FileNotFoundError as err:
-        # Display error message when file not found.
+    except (FileNotFoundError, OSError) as err:
+        # Display error message when file not found or on other os error
         print(err)
 
         # Set output to empty string so the program fails quietly
-        file_contents = ""
+        file_contents = str()
 
     return file_contents
 
@@ -149,7 +162,7 @@ def display_file_data(data, file_name):
     split_data = data.split(",")
 
     # Tell the user what data is about to be output
-    print(FILE_OUTPUT_MESSAGE + "\"" + file_name + "\":\n")
+    print(f"{FILE_OUTPUT_MESSAGE} \"{file_name}\":")
 
     # print each field on a separate line
     for line in split_data:
