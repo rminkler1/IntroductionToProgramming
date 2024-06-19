@@ -43,7 +43,6 @@ def prompt_for_user_data():
     Prompt for user data
     Returns file_name, user_name, address_street, phone_number
     """
-
     # Prompt the user for the file name. Validate file name
     file_name = get_file_name()
 
@@ -103,7 +102,7 @@ def strip_invalid_characters(string, valid_chars):
     File Validation inspired by John Charles, 2011 Stackoverflow
     https://stackoverflow.com/questions/8686880/validate-a-filename-in-python
     """
-    # Initialize blank result to add characters to for file name validation.
+    # Initialize empty string result to add characters to for file name validation.
     # Invalid characters will be dropped
     result = str()
 
