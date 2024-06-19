@@ -18,6 +18,7 @@ PROMPT_STREET_ADDRESS = "Street address: "
 PROMPT_PHONE_NUMBER = "Enter your phone number: "
 FILE_WRITTEN = "\nData was written to file"
 FILE_OUTPUT_MESSAGE = "\nData read from file"
+FILE_NOT_SAVED = "No files were saved."
 
 
 def main():
@@ -64,10 +65,7 @@ def prompt_for_user_data():
 
 def get_file_name():
     """
-    Prompt for filename
-    strip invalid characters
-    add .txt extension
-    use output.txt filename if no valid name is possible with user input
+    Gets file_name from user then validates it. Returns a valid file name or the default file name.
     """
     # Prompt user for file name
     file_name = input(PROMPT_FILE_NAME)
@@ -81,8 +79,10 @@ def get_file_name():
     # Remove them from the left side
     file_name = file_name.lstrip(FILE_NAME_SAFE_CHARACTERS)
 
-    # if the filename exceeds 251 characters (255-4), truncate the name
-    file_name = file_name[:251]
+    # If the filename exceeds 100 characters truncate the name
+    # In Windows 10 file_names exceeding 207 characters throw an error. Should be 260 char limit PC, 255 Mac.
+    # Make name shorter to avoid errors - 100 char is plenty
+    file_name = file_name[:100]
 
     # Add file name extension if not already present.
     if not file_name.endswith(FILE_EXTENSION):
@@ -123,7 +123,9 @@ def save_user_data_file(file_name, user_name, street, phone):
             file.write(f"{user_name},{street},{phone}")
 
     except OSError as err:
+        # catch OSError and print on screen.
         print(err)
+        print(FILE_NOT_SAVED)
 
     else:
         # print success message when file is written.
