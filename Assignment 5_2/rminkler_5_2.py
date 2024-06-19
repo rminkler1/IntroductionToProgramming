@@ -71,24 +71,22 @@ def get_file_name():
     """
     # Prompt user for file name
     file_name = input(PROMPT_FILE_NAME)
-
-    # Remove invalid characters
     file_name = strip_invalid_characters(file_name, valid_chars=FILE_NAME_SAFE_CHARACTERS)
 
     # If file_name is empty after validation set file_name to DEFAULT_FILE_NAME
     if len(file_name) == 0:
         file_name = DEFAULT_FILE_NAME
 
-    # if the filename exceeds 251 characters (255-4), truncate the name
-    file_name = file_name[:251]
-
-    # Add .txt extension if not already present.
-    if not file_name.endswith(FILE_EXTENSION):
-        file_name = file_name + FILE_EXTENSION
-
     # File names should not begin with any of the special safe characters
     # Remove them from the left side
     file_name = file_name.lstrip(FILE_NAME_SAFE_CHARACTERS)
+
+    # if the filename exceeds 251 characters (255-4), truncate the name
+    file_name = file_name[:251]
+
+    # Add file name extension if not already present.
+    if not file_name.endswith(FILE_EXTENSION):
+        file_name = file_name + FILE_EXTENSION
 
     return file_name
 
