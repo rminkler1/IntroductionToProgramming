@@ -10,6 +10,7 @@
 FILE_NAME_SAFE_CHARACTERS = '.-_ '
 FILE_EXTENSION = '.txt'
 DEFAULT_FILE_NAME = 'output.txt'
+MAX_FILENAME_LENGTH = 100
 
 # OUTPUT STRINGS
 PROMPT_FILE_NAME = "Enter a file name: "
@@ -71,18 +72,18 @@ def get_file_name():
     file_name = input(PROMPT_FILE_NAME)
     file_name = strip_invalid_characters(file_name, valid_chars=FILE_NAME_SAFE_CHARACTERS)
 
-    # If file_name is empty after validation set file_name to DEFAULT_FILE_NAME
-    if len(file_name) == 0:
-        file_name = DEFAULT_FILE_NAME
-
     # File names should not begin with any of the special safe characters
     # Remove them from the left side
     file_name = file_name.lstrip(FILE_NAME_SAFE_CHARACTERS)
 
+    # If file_name is empty after validation set file_name to DEFAULT_FILE_NAME
+    if len(file_name) == 0:
+        file_name = DEFAULT_FILE_NAME
+
     # If the filename exceeds 100 characters truncate the name
     # In Windows 10 file_names exceeding 207 characters throw an error. Should be 260 char limit PC, 255 Mac.
-    # Make name shorter to avoid errors - 100 char is plenty
-    file_name = file_name[:100]
+    # Make name shorter to avoid errors - MAX_FILENAME_LENGTH == 100. 100 char is plenty
+    file_name = file_name[:MAX_FILENAME_LENGTH]
 
     # Add file name extension if not already present.
     if not file_name.endswith(FILE_EXTENSION):
