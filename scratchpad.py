@@ -1,19 +1,12 @@
-file_name = 'afksjdarlkj3p4orijejfpsdoi uwepiorjasdfdasfsdafiojfdkaejfgggpawoeiafuwepoi fupofiuspfogggiaufdjfggfd hlkgsdjflsdjfkdjfsdkljfpeiotuqpeoriuwproeiwurpoqwiruepqowireuqpweoirupoieurpqoifldksjfhalskjfhlaksjdhlfkajshdflkjashf.txt'
-user_name = "robert"
-street = 'street'
-phone = '342'
-FILE_WRITTEN = "success!"
-#file_name = file_name[:150]
+# list.append(element) is used to add an element to the end of a list.
+# list.count() returns the number of elements in a list
+# list.index(element) and str.index(element) return the index of the element in the string or list.
+# list.sort() sorts the list in place.
+# str().join(sequence of strings) joins the list or tuple of strings together, using the string as a separator.
 
-print(len(file_name))
-# Create the file to write to. If OS Error is raised then print error on screen
-try:
-    with open(file_name, "w") as file:
-        file.write(f"{user_name},{street},{phone}")
+names = ['Robert', 'John', 'Sam', 'Barbara', 'Jacob', 'Jeremiah', 'Patricia', 'William']
 
-except OSError as err:
-    print('osError', err)
+empty_list = []
 
-else:
-    # print success message when file is written.
-    print(f"{FILE_WRITTEN} \"{file_name}\".")
+
+
