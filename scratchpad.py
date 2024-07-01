@@ -1,14 +1,15 @@
-names = ['Robert', 'John', 'Sam', 'Barbara', 'Jacob', 'Jeremiah', 'Patricia', 'William', 'Robert']
+# Creating a list
+my_list = [1, 2, 3, 4, 5]
 
-for index, name in enumerate(names):
-    print(index, name)
+# Creating a blank list to append items to
+my_list2 = list()
+my_list2.append(1)
 
-    # Stop printing the next name when we reach the end of the list to avoid an IndexError
-    if index < (len(names) - 1):
-        print(f'The next name is {names[index + 1]}\n')
-    else:
-        print('You have reached the end of the list.')
+# Creating a set
+my_set = {0, 1, 2, 3, 4, 5, True, False}
 
-student_scores = [("Julie", 99), ("Josh", 94), ("Shelby", 75)]
-julie_name, julie_score = student_scores[0]
-print(f"Julie’s score is: {julie_score}")
+# Creating a blank set to add items to
+my_set2 = set()
+my_set2.add(1)
+
+print(my_set)
