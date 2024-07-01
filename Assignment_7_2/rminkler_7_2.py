@@ -40,7 +40,7 @@ def build_initials(name):
     initials = str()
 
     # Iterate through each name, grabbing the first letter and appending it to initials.
-    # (uppercase followed by a period)
+    # (uppercase followed by a period and space)
     for each_name in split_name:
         initials += each_name[0].upper() + '. '
 
