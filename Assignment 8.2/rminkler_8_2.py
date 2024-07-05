@@ -25,7 +25,7 @@ STOCKS = {
 }
 
 # Build a dictionary of stock names. I could have done this with a single dictionary ticker: [price, 'name']
-# This is extra and I want to stay within the program rules for the assignment. ticker: price
+# This is extra because I want to stay within the program requirements for the assignment. ticker: price
 STOCK_NAMES = {
     'VOO': 'Vanguard S&P 500 ETF',
     'AMZN': 'Amazon.com Inc',
@@ -49,7 +49,7 @@ def main():
     # Get stock ticker from user. Return ticker, name, and price.
     ticker, stock_name, stock_price = get_stock_info()
 
-    # Dispay the results
+    # Display the results
     print(f'{ticker} - {stock_name}: ${stock_price:.2f}')
 
 
@@ -70,7 +70,7 @@ def get_stock_info():
         # Get the stock name
         stock_name = STOCK_NAMES.get(user_ticker)
 
-        # Validate results
+        # Validate results. Exit loop if valid.
         if stock_price is None or stock_name is None:
             # Show error if ticker is not found
             print(f'The ticker, {user_ticker} was not found. Please enter a different stock ticker.')
