@@ -6,9 +6,9 @@
 # Prompt the user for a ticker symbol. When found show the ticker symbol and stock price.
 # If not found display an error message.
 
-# Build dictionary with stock prices and tickers
 
 # CONSTANTS
+# Build dictionary with stock prices and tickers
 STOCKS = {
     'VOO': 509.37,
     'AMZN': 199.81,
