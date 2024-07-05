@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2240f98-d8fd-4edf-abf5-f3a90849acfa" name="Changes" comment="scratchpad">
-      <change afterPath="$PROJECT_DIR$/Assignment 6.2/rminkler_6_2.py" afterDir="false" />
+    <list default="true" id="a2240f98-d8fd-4edf-abf5-f3a90849acfa" name="Changes" comment="assignment 7.2 comment update">
+      <change afterPath="$PROJECT_DIR$/Assignment 8.2/rminkler_8_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book dictionaries and sets.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pickle_example.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scratchpad notebook.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/scratchpad notebook.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,13 +49,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.book dictionaries and sets.executor": "Run",
     "Python.fiber.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.pickle_example.executor": "Run",
     "Python.rminkler_2_2.executor": "Run",
     "Python.rminkler_3_2.executor": "Run",
     "Python.rminkler_4_2.executor": "Run",
     "Python.rminkler_5_2.executor": "Run",
     "Python.rminkler_6_2.executor": "Run",
+    "Python.rminkler_7_2.executor": "Run",
+    "Python.rminkler_8_2.executor": "Run",
     "Python.scratchpad.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -67,7 +74,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-5b207ade9991-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17890.14" />
+        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
       </set>
     </attachedChunks>
   </component>
@@ -160,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719361368943</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="assignment 7.2 comment update">
+      <option name="closed" value="true" />
+      <created>1719810827721</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1719810827721</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -173,6 +188,7 @@
     <MESSAGE value="update .gitignore" />
     <MESSAGE value="Move max file size to a global variable.&#10;Re-order file sanitation to avoid edge cases with only .-_" />
     <MESSAGE value="scratchpad" />
-    <option name="LAST_COMMIT_MESSAGE" value="scratchpad" />
+    <MESSAGE value="assignment 7.2 comment update" />
+    <option name="LAST_COMMIT_MESSAGE" value="assignment 7.2 comment update" />
   </component>
 </project>
