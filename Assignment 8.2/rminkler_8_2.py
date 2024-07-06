@@ -64,13 +64,13 @@ def get_stock_info():
         # Prompt user for a ticker symbol. Convert it to all uppercase to match ticker symbols
         user_ticker = input('Enter a ticker symbol to see its value: ').upper()
 
-        # Get the stock price
+        # Get the stock price from dictionary
         stock_price = STOCKS.get(user_ticker)
 
-        # Get the stock name
+        # Get the stock name from dictionary
         stock_name = STOCK_NAMES.get(user_ticker)
 
-        # Validate results. Exit loop if valid.
+        # Validate results. Exit loop if valid. Error msg. and repeat if invalid.
         if stock_price is None or stock_name is None:
             # Show error if ticker is not found
             print(f'The ticker, {user_ticker} was not found. Please enter a different stock ticker.')
@@ -92,10 +92,10 @@ def print_tickers():
     # print each ticker symbol.
     for ticker in STOCKS.keys():
         if (len(STOCKS) - 1) > i:
-            # print with a comma unless it is the last ticker
+            # print ticker with a comma unless it is the last ticker
             print(ticker, end=', ')
         else:
-            # on the last ticker end with a period and new line
+            # on the last ticker, end with a period and new line
             print(ticker, end='.\n')
 
         # iterate i to track how many dictionary items we have printed
