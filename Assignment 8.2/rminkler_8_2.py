@@ -2,10 +2,7 @@
 # July 5, 2024
 # Assignment 8.2
 
-# Create a dictionary of at least 10 stocks. ticker: stock price
-# Prompt the user for a ticker symbol. When found show the ticker symbol and stock price.
-# If not found display an error message.
-
+# Show the stock price of a provided ticker symbol.
 
 # CONSTANTS
 # Build dictionary with stock prices and tickers
@@ -49,7 +46,7 @@ def main():
     # Get stock ticker from user. Return ticker, name, and price.
     ticker, stock_name, stock_price = get_stock_info()
 
-    # Display the results
+    # Display results
     print(f'{ticker} - {stock_name}: ${stock_price:.2f}')
 
 
@@ -58,7 +55,6 @@ def get_stock_info():
     Prompts the user for a stock ticker. Retrieves the price and company name.
     Returns ticker, stock_name, stock_price
     """
-
     # Run this loop prompting for a ticker until a valid ticker is entered.
     while True:
         # Prompt user for a ticker symbol. Convert it to all uppercase to match ticker symbols
