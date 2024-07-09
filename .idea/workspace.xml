@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2240f98-d8fd-4edf-abf5-f3a90849acfa" name="Changes" comment="assignment 7.2 comment update">
-      <change afterPath="$PROJECT_DIR$/Assignment 8.2/rminkler_8_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book dictionaries and sets.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pickle_example.py" afterDir="false" />
+    <list default="true" id="a2240f98-d8fd-4edf-abf5-f3a90849acfa" name="Changes" comment="assignment 8.2 fixes">
+      <change afterPath="$PROJECT_DIR$/Assignment 9.2/rminkler_9_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scratchpad notebook.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/scratchpad notebook.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +57,7 @@
     "Python.rminkler_6_2.executor": "Run",
     "Python.rminkler_7_2.executor": "Run",
     "Python.rminkler_8_2.executor": "Run",
+    "Python.rminkler_9_2.executor": "Run",
     "Python.scratchpad.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -175,7 +173,47 @@
       <option name="project" value="LOCAL" />
       <updated>1719810827721</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="assignment 8.2">
+      <option name="closed" value="true" />
+      <created>1720209306777</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1720209306777</updated>
+    </task>
+    <task id="LOCAL-00013" summary="assignment 8.2 fixes">
+      <option name="closed" value="true" />
+      <created>1720209543826</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1720209543826</updated>
+    </task>
+    <task id="LOCAL-00014" summary="assignment 8.2 fixes">
+      <option name="closed" value="true" />
+      <created>1720209614324</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1720209614324</updated>
+    </task>
+    <task id="LOCAL-00015" summary="assignment 8.2 fixes">
+      <option name="closed" value="true" />
+      <created>1720280575391</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1720280575391</updated>
+    </task>
+    <task id="LOCAL-00016" summary="assignment 8.2 fixes">
+      <option name="closed" value="true" />
+      <created>1720331303865</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1720331303865</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -189,6 +227,8 @@
     <MESSAGE value="Move max file size to a global variable.&#10;Re-order file sanitation to avoid edge cases with only .-_" />
     <MESSAGE value="scratchpad" />
     <MESSAGE value="assignment 7.2 comment update" />
-    <option name="LAST_COMMIT_MESSAGE" value="assignment 7.2 comment update" />
+    <MESSAGE value="assignment 8.2" />
+    <MESSAGE value="assignment 8.2 fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="assignment 8.2 fixes" />
   </component>
 </project>
