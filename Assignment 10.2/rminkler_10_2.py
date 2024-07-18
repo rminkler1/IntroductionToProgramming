@@ -63,12 +63,13 @@ class Employee:
         """Display Employee Object state."""
         return (f'Name: {self.__name}, '
                 f'Gender: {self.__gender}, '
-                f'Hourly Pay Rate: {self.__hourly_pay_rate:,.2f}, '
+                f'Hourly Pay Rate: ${self.__hourly_pay_rate:,.2f}, '
                 f'Employee Number: {self.__employee_number}')
 
 
 class ProductionWorker(Employee):
-    def __init__(self, name: str,
+    def __init__(self,
+                 name: str,
                  gender: str,
                  hourly_pay_rate: float,
                  employee_number: int,
@@ -93,7 +94,7 @@ class ProductionWorker(Employee):
         """Display Production Worker Object state."""
         return (f'Name: {self.get_name()}, '
                 f'Gender: {self.get_gender()}, '
-                f'Hourly Pay Rate: {self.get_pay_rate():,.2f}, '
+                f'Hourly Pay Rate: ${self.get_pay_rate():,.2f}, '
                 f'Employee Number: {self.get_employee_number()}, '
                 f'Shift Number: {self.get_shift_number()}')
 
@@ -165,7 +166,7 @@ def main() -> None:
     output_employee_data(production_worker2)
 
 
-def set_employee_attributes(employee, name, gender, pay, employee_number) -> None:
+def set_employee_attributes(employee, name: str, gender: str, pay: float, employee_number: int) -> None:
     """Use setters to change all employee attributes."""
     employee.set_name(name)
     employee.set_gender(gender)
@@ -173,7 +174,8 @@ def set_employee_attributes(employee, name, gender, pay, employee_number) -> Non
     employee.set_employee_number(employee_number)
 
 
-def set_production_worker_attributes(production_worker, name, gender, pay, employee_number, shift_number) -> None:
+def set_production_worker_attributes(production_worker: ProductionWorker, name: str, gender: str, pay: float,
+                                     employee_number: int, shift_number: int) -> None:
     """Set Production Worker attributes using setters."""
     # set employee attributes using set_employee function
     set_employee_attributes(production_worker, name, gender, pay, employee_number)
@@ -193,7 +195,7 @@ def output_employee_data(employee: Employee) -> None:
     if isinstance(employee, ProductionWorker):
         print(f'Shift: {employee.get_shift_number()}')
 
-    print()   # print blank line after each employee
+    print()  # print blank line after each employee
 
 
 if __name__ == '__main__':
