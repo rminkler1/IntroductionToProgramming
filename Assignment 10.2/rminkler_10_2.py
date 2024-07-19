@@ -166,7 +166,7 @@ def main() -> None:
     output_employee_data(production_worker2)
 
 
-def set_employee_attributes(employee, name: str, gender: str, pay: float, employee_number: int) -> None:
+def set_employee_attributes(employee: Employee, name: str, gender: str, pay: float, employee_number: int) -> None:
     """Use setters to change all employee attributes."""
     employee.set_name(name)
     employee.set_gender(gender)
